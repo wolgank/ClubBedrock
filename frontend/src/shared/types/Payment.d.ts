@@ -1,0 +1,1 @@
+export type PaymentMethod = "tarjeta"; // agregar si aparecen más

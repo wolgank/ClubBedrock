@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.bun.db-init
+    container_name: prototipo_ingesfot_backend
+    env_file:
+      - ./backend/.env
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./upload:/upload
+    entrypoint: ["/usr/local/bin/entrypoint-init.sh"]
+    command: ["bun", "run", "--hot", "src/index.ts"]

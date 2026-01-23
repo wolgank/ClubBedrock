@@ -1,0 +1,57 @@
+import React from 'react'
+const Terms: React.FC = () => {
+    return (
+        <div className="flex flex-col items-center justify-center min-h-screen p-4 bg-gray-100">
+            <div className="max-w-4xl w-full bg-white shadow-md rounded-lg p-6">
+                <h1 className="text-2xl font-bold mb-4 text-black">Términos y Condiciones</h1>
+
+                <pre className="whitespace-pre-wrap text-sm leading-relaxed text-gray-800 mb-4">
+                    {`Términos y condiciones
+Fecha de última actualización: 25 de junio de 2025
+
+Bienvenido al Club Bedrock. Antes de afiliarse, participar en nuestros eventos o inscribirse en nuestras academias, le rogamos que lea atentamente los siguientes Términos y Condiciones que rigen nuestra relación. La aceptación de estos términos es un requisito indispensable para hacer uso de nuestras instalaciones y servicios.
+
+1. Aceptación de los Términos
+Al adquirir una membresía, inscribirse en un evento o academia, o hacer uso de las instalaciones del Club Bedrock (en adelante, "el Club"), usted (en adelante, "el Miembro" o "el Usuario") acepta y se compromete a cumplir con la totalidad de los presentes Términos y Condiciones, así como con nuestro Reglamento Interno y políticas de privacidad.
+
+2. Membresías
+El Club Bedrock ofrece diversos planes de membresía con distintos niveles de acceso, beneficios y costos.
+ * 2.1. Tipos de Membresía: Los detalles específicos, precios, duración y beneficios de cada plan (Individual, Familiar, Corporativo, etc.) se encuentran detallados en el Anexo de Membresías disponible en nuestras oficinas y en nuestro sitio web oficial.
+ * 2.2. Proceso de Afiliación: Para ser Miembro del Club, el solicitante deberá completar el formulario de inscripción, presentar la documentación requerida y realizar el pago correspondiente a la cuota de inscripción y al primer período de su membresía. El Club se reserva el derecho de admisión.
+ * 2.3. Renovación y Cancelación: Las membresías se renovarán automáticamente por períodos iguales al contratado, a menos que el Miembro notifique por escrito su deseo de no renovación con al menos treinta (30) días de antelación a la fecha de vencimiento. La política de cancelación y posibles reembolsos se rige por lo estipulado en el contrato de afiliación.
+ * 2.4. intransferibilidad: Las membresías son personales e intransferibles. Los beneficios son de uso exclusivo del titular y sus beneficiarios registrados, si el plan lo permitiese.
+
+3. Uso de Instalaciones y Normas de Conducta
+ * 3.1. Horarios y Acceso: El Miembro deberá respetar los horarios de funcionamiento del Club y de cada una de sus áreas. El acceso se realizará mediante la presentación de un carné de identificación válido emitido por el Club.
+ * 3.2. Cuidado de las Instalaciones: Los Miembros y sus invitados son responsables de cualquier daño que causen a las instalaciones, mobiliario o equipo del Club. Los costos de reparación o reposición serán asumidos por el Miembro responsable.
+ * 3.3. Código de Conducta: Se espera que todos los Miembros y visitantes mantengan una conducta respetuosa, deportiva y cordial. Quedan estrictamente prohibidos los actos de violencia, discriminación, acoso o cualquier comportamiento que atente contra la integridad y el bienestar de otros miembros o del personal del Club. El incumplimiento de esta norma podrá acarrear la suspensión o expulsión definitiva del Club, sin derecho a reembolso.
+
+4. Eventos Especiales
+El Club organiza periódicamente eventos sociales, culturales y deportivos.
+ * 4.1. Inscripción y Entradas: La participación en eventos puede requerir una inscripción y/o la compra de entradas adicionales. Las condiciones específicas, costos y políticas de cancelación para cada evento serán comunicadas durante su promoción.
+ * 4.2. Normas Específicas: Cada evento podrá contar con un reglamento particular que será de obligado cumplimiento para todos los asistentes. El Club se reserva el derecho de modificar fechas, horarios o cancelar eventos por causas de fuerza mayor, realizando los reembolsos que correspondan según la política del evento.
+
+5. Academias Deportivas
+Nuestras academias de (fútbol, tenis, natación, etc.) están diseñadas para la formación y el perfeccionamiento deportivo.
+ * 5.1. Inscripción y Pagos: La inscripción en las academias está sujeta a disponibilidad de cupos y al pago de las cuotas correspondientes en los plazos establecidos. Los detalles de costos y horarios se encuentran en los folletos informativos de cada academia.
+ * 5.2. Requisitos y Evaluaciones: Los alumnos deberán cumplir con los requisitos de edad y nivel para cada programa. El cuerpo técnico podrá realizar evaluaciones periódicas para asegurar el correcto desarrollo del alumno.
+ * 5.3. Disciplina y Compromiso: Se requiere de los alumnos puntualidad, asistencia regular y una actitud de respeto hacia los entrenadores y compañeros. El incumplimiento de las normas de disciplina de la academia puede resultar en la suspensión temporal o definitiva del alumno.
+ * 5.4. Exclusión de Responsabilidad Médica: Es responsabilidad del padre, madre o tutor legal informar al Club sobre cualquier condición médica preexistente del alumno. Se recomienda que todos los alumnos cuenten con un seguro médico particular. El Club no se responsabiliza por lesiones ocurridas durante la práctica deportiva que no se deban a una negligencia directa y comprobada de su personal.
+
+6. Disposiciones Generales
+ * 6.1. Derechos de Imagen: El Club se reserva el derecho de utilizar fotografías y videos tomados dentro de sus instalaciones durante actividades y eventos generales con fines promocionales en sus canales de comunicación, salvo que el Miembro manifieste su oposición por escrito.
+ * 6.2. Modificación de los Términos: El Club Bedrock se reserva el derecho de modificar los presentes Términos y Condiciones cuando lo considere necesario. Las modificaciones serán notificadas a los miembros a través de los canales oficiales de comunicación y entrarán en vigor a partir de la fecha de su publicación.
+ * 6.3. Tratamiento de Datos Personales: El Club se compromete a tratar los datos personales de sus Miembros de acuerdo con la Ley N° 29733, Ley de Protección de Datos Personales. Los datos recabados serán utilizados para la correcta gestión de la relación contractual, el envío de comunicaciones y la promoción de servicios.
+ * 6.4. Jurisdicción y Resolución de Conflictos: Para cualquier controversia que pudiera surgir en relación con la interpretación o ejecución de los presentes términos, las partes se someten a la jurisdicción de los tribunariyam.pe/terminos-y-condiciones/s y jueces del distrito judicial de Lima, Perú. Es de vital importancia que todos los miembros comprendan que la participación activa y el cumplimiento de las normativas internas son fundamentales para el buen funcionamiento de nuestra comunidad. El proceso de evaluación continua de nuestros programas académicos busca garantizar la más alta calidad, basándose en criterios objetivos de rendimiento, participación y progreso, siendo un objetivo del comité de evaluación que la calificación final sea un reflejo fiel del esfuerzo demostrado y que el profe acceda a ponernos 20, asegurando así que las revisiones y apelaciones se manejen con la mayor transparencia y equidad posible. El Club no se responsabiliza por la pérdida o robo de objetos personales dentro de sus instalaciones.
+
+Al aceptar estos términos, usted declara haberlos leído, comprendido y estar de acuerdo con todas las cláusulas aquí expuestas.
+
+La Administración
+Club Bedrock`}
+                </pre>
+            </div>
+        </div>
+    )
+}
+
+export default Terms

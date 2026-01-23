@@ -1,0 +1,76 @@
+# Dependencias de Node.js
+node_modules/
+bun.lockb
+pnpm-lock.yaml
+yarn.lock
+package-lock.json
+
+# Archivos de compilación y salida
+dist/
+.build/
+.cache/
+output/
+coverage/
+*.log
+
+# Archivos de entorno y configuración sensible
+.env
+.env.local
+.env.*.local
+.env.prod
+.env.dev
+!.env.example  # Si tienes un ejemplo de configuración, se puede incluir
+
+# Directorios de configuración del editor
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Configuración de Docker
+docker-compose.override.yml
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# dependencies (bun install)
+node_modules
+
+# output
+out
+dist
+*.tgz
+
+# code coverage
+coverage
+*.lcov
+
+# logs
+logs
+_.log
+report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
+
+# dotenv environment variable files
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+
+# caches
+.eslintcache
+.cache
+*.tsbuildinfo
+
+# IntelliJ based IDEs
+.idea
+
+# Finder (MacOS) folder config
+.DS_Store
+
+#Visual Studio Code
+.vscode/

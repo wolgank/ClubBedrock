@@ -1,0 +1,142 @@
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Logs generales
+*.log
+
+# Entornos locales
+.env
+*.env.local
+
+# Editor/IDE
+.vscode/
+.idea/
+*.sw?
+./upload/*
+# Salidas temporales
+dist/
+build/
+node_modules/
+upload/
+mysql-custom/
+shared-types/
+build.sh
+*.pem
+envs_temp_backend.env
+
+
+# --- Entornos y Secretos (CRÍTICO) ---
+.env
+.env.local
+.env.*.local
+*.pem
+terraform.tfvars
+set_aws_credentials.sh
+
+# --- Dependencias ---
+node_modules/
+bun.lockb
+# (Nota: bun.lock si se puede subir, pero bun.lockb es el binario)
+
+# --- Terraform ---
+.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+
+# --- Builds y Logs ---
+dist/
+build/
+*.log
+backendlogs.txt
+logsDeGit.txt
+
+# --- Archivos de Base de Datos y Runtime ---
+# Ignora archivos temporales de Drizzle si fuera necesario, 
+# pero mantén la carpeta /drizzle/migrations si quieres versionar el esquema.
+.drizzle/
+
+# --- Docker ---
+.docker/
+# Ignora copias temporales de Dockerfiles
+Dockerfile copy
+
+# --- Multimedia / Uploads ---
+# Como tienes una carpeta /upload con muchas imágenes de prueba,
+# es mejor no subirlas al repo para no pesarlo.
+upload/
+frontend/dist/
+frontend/clubbedrock.jpg
+
+# --- OS / IDE ---
+.DS_Store
+.vscode/
+.idea/
+*.swp
+
+
+# --- Entornos y Secretos (CRÍTICO) ---
+.env
+.env.local
+.env.*.local
+*.pem
+terraform.tfvars
+set_aws_credentials.sh
+
+# --- Dependencias ---
+node_modules/
+bun.lockb
+# (Nota: bun.lock si se puede subir, pero bun.lockb es el binario)
+
+# --- Terraform ---
+.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+
+# --- Builds y Logs ---
+dist/
+build/
+*.log
+backendlogs.txt
+logsDeGit.txt
+
+# --- Archivos de Base de Datos y Runtime ---
+# Ignora archivos temporales de Drizzle si fuera necesario, 
+# pero mantén la carpeta /drizzle/migrations si quieres versionar el esquema.
+.drizzle/
+
+# --- Docker ---
+.docker/
+# Ignora copias temporales de Dockerfiles
+Dockerfile copy
+
+# --- Multimedia / Uploads ---
+# Como tienes una carpeta /upload con muchas imágenes de prueba,
+# es mejor no subirlas al repo para no pesarlo.
+upload/
+frontend/dist/
+frontend/clubbedrock.jpg
+
+# --- OS / IDE ---
+.DS_Store
+.vscode/
+.idea/
+*.swp
+
+*.pem
+ingesoftKey.pem
+
+deliverContent.sh
+*.sh
+*.pem
+.env
+.env.prod
+deploy.sh
+despliegueCompleto.sh
+logsDeGit.txt
+seeEC2.sh
+seed.sh
+
+frontend/logsDeGit.txt

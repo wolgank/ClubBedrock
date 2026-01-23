@@ -1,0 +1,515 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* Aplica Poppins a todo */
+html,
+body,
+#root {
+  font-family: 'Poppins', sans-serif;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --brand: #318161;
+  /* Club Bedrock */
+  --brand-light: #6C886E;
+  /* botón “Ver más” */
+  --bg-light: #F4F4F4;
+  /* color por defecto en light */
+  --bg-light-alt: #F3F0EA;
+  /* fondo claro alterno */
+  --bg-info: #C1DEB1;
+  /* Para botones informativos */
+  --bg-dark: #142E38;
+  /* fondo medio celeste */
+
+  --text-light: #F4F4F4;
+  /* texto blanco */
+  --text-light-alt: #F3F0EA;
+  /* texto blanco alterno */
+  --text-dark: #142E38;
+  /* texto oscuro */
+
+  --nav-bg: #F3F0EA;
+  /* fondo blanco */
+  --nav-text: #142E38;
+  /* tu “media azul” */
+  --nav-hover: #318161;
+  /* color al pasar el ratón */
+
+  --footer-bg: #F3F0EA;
+  /* fondo claro */
+  --footer-text: #142E38;
+  /* texto “media azul” */
+
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+  --nav-bg: var(--bg-dark);
+  /* #142E38 */
+  --nav-text: var(--text-light);
+  /* #F4F4F4 */
+  --nav-hover: var(--brand-light);
+  /* #6C886E */
+
+  --footer-bg: var(--bg-dark);
+  /* #142E38 */
+  --footer-text: var(--text-light);
+  /* #F4F4F4 */
+
+  --brand: #3ea87e;
+  /* Club Bedrock */
+  --brand-light: #93b094;
+}
+
+@layer base {
+  :root {
+    :root {
+      --background: 0 0% 100%;
+      --foreground: 222.2 47.4% 11.2%;
+
+      --muted: 210 40% 96.1%;
+      --muted-foreground: 215.4 16.3% 46.9%;
+
+      --popover: 0 0% 100%;
+      --popover-foreground: 222.2 47.4% 11.2%;
+
+      --border: 214.3 31.8% 91.4%;
+      --input: 214.3 31.8% 91.4%;
+
+      --card: transparent;
+      --card-foreground: 222.2 47.4% 11.2%;
+
+      --primary: 222.2 47.4% 11.2%;
+      --primary-foreground: 210 40% 98%;
+
+      --secondary: 210 40% 96.1%;
+      --secondary-foreground: 222.2 47.4% 11.2%;
+
+      --accent: 210 40% 96.1%;
+      --accent-foreground: 222.2 47.4% 11.2%;
+
+      --destructive: 0 100% 50%;
+      --destructive-foreground: 210 40% 98%;
+
+      --ring: 215 20.2% 65.1%;
+
+      --radius: 0.5rem;
+
+      --chart-1: 12 76% 61%;
+      --chart-2: 156 67% 54%;
+      --chart-3: 197 37% 24%;
+      --chart-4: 43 74% 66%;
+      --chart-5: 27 87% 67%;
+    }
+
+    .dark {
+      --background: 224 71% 4%;
+      --foreground: 213 31% 91%;
+
+      --muted: 223 47% 11%;
+      --muted-foreground: 215.4 16.3% 56.9%;
+
+      --accent: 216 34% 17%;
+      --accent-foreground: 210 40% 98%;
+
+      --popover: 224 71% 4%;
+      --popover-foreground: 215 20.2% 65.1%;
+
+      --border: 216 34% 17%;
+      --input: 216 34% 17%;
+
+      --card: transparent;
+      --card-foreground: 213 31% 91%;
+
+      --primary: 210 40% 98%;
+      --primary-foreground: 222.2 47.4% 1.2%;
+
+      --secondary: 222.2 47.4% 11.2%;
+      --secondary-foreground: 210 40% 98%;
+
+      --destructive: 0 63% 31%;
+      --destructive-foreground: 210 40% 98%;
+
+      --ring: 216 34% 17%;
+
+      --radius: 0.5rem;
+
+      --chart-1: 220 70% 50%;
+      --chart-2: 156 67% 54%;
+      --chart-3: 30 80% 55%;
+      --chart-4: 280 65% 60%;
+      --chart-5: 340 75% 55%;
+    }
+  }
+}
+
+@layer base {
+  html, body {
+    @apply m-0 p-0;
+    min-height: 100%;
+    overflow-x: hidden;
+  }
+
+  * {
+    /* @apply border-border outline-ring/50; */
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .all-\[unset\] {
+    all: unset;
+  }
+}
+
+@tailwind utilities;
+
+/* NAVBAR */
+.navbar {
+  width: 100%;
+  height: 5rem;
+  background: var(--nav-bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+.navbar .logo {
+  color: var(--brand);
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar ul li a {
+  color: var(--nav-text);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.navbar ul li a:hover {
+  color: var(--nav-hover);
+}
+
+
+/* Botón verde */
+.btn-brand {
+  display: inline-block;
+  padding: 0.75rem 3.5rem;
+  /* py-3 px-6 */
+  background-color: var(--brand-light);
+  color: var(--text-light);
+  font-weight: 500;
+  border: none;
+  border-radius: 0.375rem;
+  /* rounded-md */
+  cursor: pointer;
+  transition: background-color .2s;
+}
+
+.btn-brand:hover {
+  background-color: var(--brand);
+}
+
+/* FOOTER */
+.footer {
+  width: 100%;
+  background: var(--footer-bg);
+  color: var(--footer-text);
+  padding: 1.875rem;
+  text-align: center;
+}
+
+
+
+@layer utilities {
+
+  /* Fondo de página */
+  .auth-background {
+    @apply flex items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900;
+  }
+
+  .auth-card {
+    @apply w-[900vw] max-w-[1280px] h-[600px] mx-auto bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-xl grid grid-cols-1 md:grid-cols-2;
+    gap: 0;
+    /* sin gap en móvil */
+  }
+
+  .navigate-custom {
+    @apply flex items-center gap-2 p-3 bg-[#e6f1ec] rounded-[10px] text-[#142e38] dark:bg-[var(--color-gray-800)] dark:text-[var(--primary)] dark:hover:bg-[var(--color-gray-600)] shadow;
+  }
+
+  .background-custom {
+  /* Color de fondo claro */
+  @apply bg-[#f3f0ea] shadow-[0_0_10px_8px_rgba(0,0,0,0.1)] dark:bg-[var(--color-gray-800)] dark:shadow-black dark:shadow-[0_0_30px_5px_rgba(0,0,0,0.1)];
+  }
+  
+
+  .card-custom {
+  /* Color de fondo claro */
+  @apply  dark:bg-[var(--color-gray-900)] shadow-gray-400 shadow-[0_0_10px_0px_rgba(0,0,0,0)]  dark:shadow-slate-700
+  }
+
+  .button-custom {
+  /* Color de fondo claro */
+  @apply bg-[#142e38] hover:bg-[var(--color-gray-600)] dark:bg-[var(--color-gray-800)] dark:hover:bg-[var(--color-gray-600)]
+  }
+  
+  .collapsible-custom {
+    @apply bg-[#142e38] shadow-gray-300 shadow-[0_0_5px_0px_rgba(0,0,0,0)] dark:shadow-slate-700
+  }
+
+  .button2-custom {
+  /* Color de fondo claro */
+  @apply bg-[#142e38] hover:bg-[var(--color-gray-600)]  dark:bg-[var(--color-gray-900)] dark:hover:bg-[var(--color-gray-600)] 
+  }
+
+  .button3-custom {
+  /* Color de fondo claro */
+  @apply bg-[#318161] hover:bg-[#3ea87e] shadow-[0_0_5px_0px_rgba(0,0,0,0)] shadow-gray-500 
+  }
+
+  .button4-custom {
+  /* Color de fondo claro */
+  @apply bg-[#142e38] hover:bg-[var(--color-gray-600)]  dark:bg-[var(--color-gray-900)] dark:hover:bg-[var(--color-gray-600)] shadow-[0_0_5px_0px_rgba(0,0,0,0)] shadow-gray-500
+  }
+
+  .image-custom {
+  /* Color de fondo claro */
+  @apply shadow-[0_0_10px_0px_rgba(0,0,0,0)] shadow-black
+  }
+
+
+
+  @media (min-width: 768px) {
+    .auth-card {
+      gap: 1px;
+      /* separa ligeramente columnas en desktop */
+    }
+  }
+
+  /* Panel formulario */
+  .form-panel {
+    @apply p-8 flex flex-col justify-center;
+  }
+
+  /* Panel media (video o color) */
+  .media-panel {
+    @apply relative;
+  }
+
+  .media-panel video,
+  .media-panel img {
+    @apply absolute inset-0 w-full h-full object-cover;
+  }
+
+  .media-overlay {
+    @apply absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-center p-8;
+  }
+}
+
+@layer components {
+  /* overlay más alto */
+  .dialog-overlay {
+    @apply fixed inset-0 z-[120] bg-black/50 pointer-events-none;
+  }
+
+  /* contenedor centrador */
+  .dialog-container {
+    @apply fixed inset-0 z-[130] flex items-center justify-center p-4;
+  }
+
+  /* panel principal */
+  .dialog-panel {
+    @apply relative                     /* ancla para sombras si hicieras spinner */
+           w-[90vw] max-w-5xl           /* ancho responsivo */
+           max-h-[90vh] overflow-y-auto /* ✔ evita desbordar y mantiene centrado */
+           bg-[var(--bg-light-alt)] dark:bg-[var(--bg-dark)]
+           p-8 rounded-2xl border-none shadow-xl;
+  }
+
+  .dialog-header  { @apply mb-6; }
+  .dialog-title   { @apply text-2xl font-bold text-[var(--brand)]; }
+  .dialog-content { @apply w-full space-y-10; }
+  .dialog-footer  { @apply mt-6 flex justify-end gap-2; }
+
+  .dialog-narrow {
+    /* — ancho — */
+    @apply w-[92vw] md:w-[45vw]      /* 92 % en mobile, 45 % en ≥768 px   */
+           max-w-lg                  /* tope ≈ 512 px                      */
+
+    /* — aspecto — */
+           p-6 rounded-xl
+           bg-[var(--bg-light-alt)] dark:bg-[var(--bg-dark)]
+           border-none shadow-xl;
+  }
+
+
+}
+
+
+/* ───── Radix Dialog fix para dropdowns (Select, Combobox, etc.) ───── */
+
+/* 1. El overlay sigue viéndose, pero deja pasar clics */
+[data-radix-dialog-overlay],
+.dialog-overlay {           /* si usas tu overlay custom */
+  pointer-events: none;
+}
+
+/* 2. Asegura que el contenido del diálogo esté por encima del overlay */
+[data-radix-dialog-content] {
+  z-index: 50;                 /* por si tu proyecto añade otros z-index altos */
+}
+
+/* 3. Menús de Radix Select/Popover encima del diálogo */
+[data-radix-select-content],
+[data-radix-popover-content] {
+  z-index: 60;                 /* lo suficiente para quedar sobre el diálogo */
+}
+
+
+/* ---------- Modal minimal ---------- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;                       /* ocupa toda la pantalla   */
+  display: flex;                 /* centra lo que contiene   */
+  align-items: center;           /* eje Y                    */
+  justify-content: center;       /* eje X                    */
+  background: rgba(0,0,0,.50);   /* oscurece el fondo        */
+  backdrop-filter: blur(2px);    /* opcional: blur suave     */
+  z-index: 120;                  /* por encima de todo       */
+}
+
+.modal-panel {
+  position: relative;
+  width: 90vw;                   /* 90 % en móviles          */
+  max-width: 64rem;              /* tope ≈ 1024 px           */
+  max-height: 90vh;              /* nunca rebasa la pantalla */
+  overflow-y: auto;              /* scroll interno si crece  */
+
+  background: var(--bg-light-alt);
+  color: var(--foreground);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,.25);
+}
