@@ -1,3 +1,13 @@
+# CONTRIBUTORS
+* VladCan
+* Makusoku
+* elm1smo
+* Argedia
+* pamdxtre
+* gainOwo
+* Jean-RF
+* giano-montano
+* wolgank
 # Prototipo Arquitectura
 
 Este proyecto es un prototipo de arquitectura de software. Aquí te explicamos cómo instalarlo y levantarlo correctamente.
@@ -110,3 +120,4 @@ Si al intentar ejecutar `bunx drizzle-kit push` obtienes un error relacionado co
 
 #### Clonar base de datos,  solo los datos
 mysqldump -h db-club-bedrock.cgtn0puuykev.us-east-1.rds.amazonaws.com -u ladmin -p --no-create-info Production > solo_datos.sql
+
